@@ -1,0 +1,35 @@
+{
+    "name": "casimirorocha/laravel-pagseguro",
+    "description": "PagSeguro Checkout Transparente e Pagamento Recorrente (Assinaturas) no Laravel 5.*, 6.*, 7.* e 8.*",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "pagseguro", "transparente", "recorrente", "assinaturas"],
+    "authors": [
+        {
+            "name": "Casimiro Carvalho Rocha",
+            "email": "casimiroaf@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CRSistemas\\PagSeguro\\": "src/CRSistemas/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "^5.2|^6.0|^7.0|^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CRSistemas\\PagSeguro\\PagSeguroServiceProvider"
+            ],
+            "aliases": {
+                "PagSeguro": "CRSistemas\\PagSeguro\\PagSeguroFacade",
+                "PagSeguroRecorrente": "CRSistemas\\PagSeguro\\PagSeguroRecorrenteFacade",
+                "PagSeguroBoleto": "CRSistemas\\PagSeguro\\PagSeguroBoletoFacade"
+            }
+        }
+    }
+}
